@@ -310,7 +310,7 @@ function gotoLogin() {
     $('.screen.login-screen .form').css('max-height', ($(window).height() - $('.screen.login-screen .top').height() + 35) + 'px');
 }
 
-function gotoGame(){
+function gotoLevel1(){
 	screen.orientation.lock('landscape');
 	popup = 1;
 	colors = 0;
@@ -331,12 +331,8 @@ function gotoControlPanel() {
     $('body').removeClass();
     $('body').addClass('control-panel');
     $('.screen.control-panel-screen').css('top', $('.header').outerHeight() + 'px');
-    // $('.control-panel-screen .lectii .lista-lectii').width($('.control-panel-screen .lectii .lista-lectii .lectie').length * ($('.control-panel-screen .lectii .lista-lectii .lectie').outerWidth() + 35) - 35);
-    // $('.control-panel-screen .activitati .lista-activitati').width($('.control-panel-screen .activitati .lista-activitati .activity').length * ($('.control-panel-screen .activitati .lista-activitati .activity').outerWidth() + 35) - 35);
 	
 	$('.loading').show();
-	// $('.control-panel-screen .lista-lectii').empty();
-	// $('.activity-screen #activity_nr_lectie').empty();
 }
 
 function goBack() {
@@ -867,7 +863,7 @@ $(function() {
 /* END Level 1 */
 
 
-/* Level 2 */
+// /* Level 2 */
 // function gotoLevel2() {
 //     $('body').removeClass('level1');
 //     $('body').addClass('level2');
@@ -880,59 +876,219 @@ $(function() {
 //     $('.button').show();
 // }
 
-// function clickNor() {
-//     $('.poluare').addClass('fara-nor');
-//     $('.nor').fadeOut();
-//     if(!$('.monitor').is(":visible") && !$('.masina-veche').is(":visible")) {
-//         $('.poluare').hide();
-//         popupCopaci();
-//     }
-// }
-// function clickMonitor() {
-//     $('.monitor').fadeOut();
-//     if(!$('.nor').is(":visible") && !$('.masina-veche').is(":visible")) {
-//         $('.poluare').hide();
-//         popupCopaci();
-//     }
-// }
-// function clickMasinaVeche() {
-//     $('.popup.masina').fadeIn();
-// }
-// function popupCloseMasina() {
-//     $('.popup').fadeOut();
-//     $('.masina-veche').fadeOut();
-//     $('.masina-electrica').fadeIn();
-//     if(!$('.nor').is(":visible") && !$('.monitor').is(":visible")) {
-//         $('.poluare').hide();
-//         popupCopaci();
-//     }
-// }
-// function popupCopaci() {
-//     $('.popup.copaci').fadeIn();
-// }
-// function startCopaci() {
-//     $('.popup.copaci').fadeOut();
-//     $('.copac').fadeIn();
-// }
-// function clickCopac1() {
-//     $('.copac.copac1 img.copac-img').css('opacity', '1');
-//     $('.copac.copac1 .button').hide();
-//     if($('.copac.copac2 img.copac-img').css('opacity') == 1) {
-//         $('.level2-screen .popup.final').fadeIn();
-//     }
-// }
-// function clickCopac2() {
-//     $('.copac.copac2 img.copac-img').css('opacity', '1');
-//     $('.copac.copac2 .button').hide();
-//     if($('.copac.copac1 img.copac-img').css('opacity') == 1) {
-// 		if( user_id > 0 ){
-// 			$('.level2-screen .popup.final2').fadeIn();
-// 		}else{
-// 			$('.level2-screen .popup.final').fadeIn();
-// 		}
-//     }
-// }
-/* END level 2 */
+// // Define the story steps and options
+// const storySteps = [
+// 	{
+// 	  stepText: "Choose a beginning...",
+// 	  options: [
+// 		{
+// 		  image: "images/image1.jpg",
+// 		  text: "Once upon a time",
+// 		  background: "background1.jpg"
+// 		},
+// 		{
+// 		  image: "image2.jpg",
+// 		  text: "In a faraway land",
+// 		},
+// 		{
+// 		  image: "image3.jpg",
+// 		  text: "Long, long ago",
+// 		},
+// 		{
+// 		  image: "image4.jpg",
+// 		  text: "In a magical kingdom",
+// 		},
+// 	  ],
+// 	},
+// 	{
+// 	  stepText: "Choose a place...",
+// 	  options: [
+// 		{
+// 		  image: "image5.jpg",
+// 		  text: "In the enchanted forest",
+// 		},
+// 		{
+// 		  image: "image6.jpg",
+// 		  text: "On a beautiful beach",
+// 		},
+// 		{
+// 		  image: "image7.jpg",
+// 		  text: "In a bustling city",
+// 		},
+// 		{
+// 		  image: "image8.jpg",
+// 		  text: "At the top of a mountain",
+// 		},
+// 	  ],
+// 	},
+// 	{
+// 	  stepText: "Choose a character...",
+// 	  options: [
+// 		{
+// 		  image: "image9.jpg",
+// 		  text: "A brave knight",
+// 		},
+// 		{
+// 		  image: "image10.jpg",
+// 		  text: "A friendly dragon",
+// 		},
+// 		{
+// 		  image: "image11.jpg",
+// 		  text: "A mischievous fairy",
+// 		},
+// 		{
+// 		  image: "image12.jpg",
+// 		  text: "A curious astronaut",
+// 		},
+// 	  ],
+// 	},
+// 	{
+// 	  stepText: "Choose an object...",
+// 	  options: [
+// 		{
+// 		  image: "image13.jpg",
+// 		  text: "A magic wand",
+// 		},
+// 		{
+// 		  image: "image14.jpg",
+// 		  text: "A treasure chest",
+// 		},
+// 		{
+// 		  image: "image15.jpg",
+// 		  text: "A spaceship",
+// 		},
+// 		{
+// 		  image: "image16.jpg",
+// 		  text: "A secret map",
+// 		},
+// 	  ],
+// 	},
+// 	{
+// 	  stepText: "Choose an ending...",
+// 	  options: [
+// 		{
+// 		  image: "image17.jpg",
+// 		  text: "And they lived happily ever after.",
+// 		},
+// 		{
+// 		  image: "image18.jpg",
+// 		  text: "The end.",
+// 		},
+// 		{
+// 		  image: "image19.jpg",
+// 		  text: "To be continued...",
+// 		},
+// 		{
+// 		  image: "image20.jpg",
+// 		  text: "And so the adventure continues.",
+// 		},
+// 	  ],
+// 	},
+//   ];
+  
+//   // Initialize variables
+//   let currentStep = 0;
+//   const selectedOptions = new Array(storySteps.length);
+  
+//   // Function to render the current step
+//   function renderStep() {
+// 	const storyContainer = document.getElementById("story-container");
+// 	const optionsContainer = document.getElementById("options-container");
+// 	const nextButton = document.getElementById("next-button");
+  
+// 	storyContainer.textContent = `Step ${currentStep + 1}: ${storySteps[currentStep].stepText}`;
+  
+// 	optionsContainer.innerHTML = "";
+  
+// 	for (let i = 0; i < storySteps[currentStep].options.length; i++) {
+// 	  const option = storySteps[currentStep].options[i];
+// 	  const optionElement = document.createElement("div");
+// 	  const imageElement = document.createElement("img");
+// 	  const textElement = document.createElement("div");
+  
+// 	  optionElement.className = "option";
+// 	  imageElement.src = option.image;
+// 	  imageElement.className = "option-image";
+// 	  textElement.className = "option-text";
+// 	  textElement.textContent = option.text;
+  
+// 	  optionElement.addEventListener("click", () => selectOption(i));
+  
+// 	  optionElement.appendChild(imageElement);
+// 	  optionElement.appendChild(textElement);
+  
+// 	  optionsContainer.appendChild(optionElement);
+// 	}
+  
+// 	nextButton.disabled = true;
+//   }
+  
+//   // Function to handle option selection
+//   function selectOption(optionIndex) {
+// 	const selectedOption = selectedOptions[currentStep];
+  
+// 	// Toggle the selection state
+// 	if (selectedOption === optionIndex) {
+// 	  selectedOptions[currentStep] = undefined;
+// 	} else {
+// 	  selectedOptions[currentStep] = optionIndex;
+// 	}
+  
+// 	// Update the UI to reflect the selection
+// 	const options = document.querySelectorAll(".option");
+// 	options.forEach((option, index) => {
+// 	  if (index === optionIndex) {
+// 		option.classList.toggle("selected");
+// 	  } else {
+// 		option.classList.remove("selected");
+// 	  }
+// 	});
+  
+// 	// Enable the Next button if an option is selected
+// 	const nextButton = document.getElementById("next-button");
+// 	nextButton.disabled = selectedOptions[currentStep] === undefined;
+//   }
+  
+//   // Function to generate the story summary
+//   function generateSummary() {
+// 	let summary = "";
+// 	for (let i = 0; i < selectedOptions.length; i++) {
+// 	  const optionIndex = selectedOptions[i];
+// 	  if (optionIndex !== undefined) {
+// 		const option = storySteps[i].options[optionIndex];
+// 		summary += option.text + " ";
+// 	  }
+// 	}
+// 	return summary.trim();
+//   }
+  
+//   // Function to proceed to the next step or display the summary
+//   function nextStep() {
+// 	currentStep++;
+// 	if (currentStep < storySteps.length) {
+// 	  renderStep();
+// 	} else {
+// 	  const summaryContainer = document.getElementById("summary-container");
+// 	  const nextButton = document.getElementById("next-button");
+  
+// 	  // Hide the options container and disable the Next button
+// 	  document.getElementById("options-container").style.display = "none";
+// 	  nextButton.disabled = true;
+  
+// 	  // Update the summary
+// 	  summaryContainer.textContent = "Summary: " + generateSummary();
+  
+// 	  // Scroll to the summary container
+// 	  summaryContainer.scrollIntoView({ behavior: "smooth" });
+// 	}
+//   }
+  
+//   // Render the initial step
+//   renderStep();
+  
+  
+
+// /* END level 2 */
 
 function final() {
     // AICI ESTE FUNCTIA DE FINAL SA-L INTOARCEM IN APLICATIE

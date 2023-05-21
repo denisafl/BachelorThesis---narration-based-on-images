@@ -51,10 +51,17 @@
     <div class="top" onclick="gotoControlPanel()">
         <img src="images/home-top.png">
     </div>
-    <div class="button" onclick="gotoGame()">
-        <span class="title"><img src="images/home-button4.png" />Interactive game</span><br>
+    <div class="button" onclick="gotoLevel1()">
+        <span class="title"><img src="images/home-button4.png" />Game 1</span><br>
         <span class="subtitle">Learn by playing!</span>
+    </div>	
+	<div class="button" onclick="gotoLevel2()">
+		<a href="level2.html" style="text-decoration: none; color: black;">
+        	<span class="title"><img src="images/home-button4.png" />Game 2</span><br>
+		</a>
+		<span class="subtitle">Discover the story by creating it!</span>
     </div>
+
 </div>
 
 <div class="screen login-screen">
@@ -160,8 +167,8 @@
 		<div class="popup-content">
 			<div class="popup-background"><img src="images/level1/popup.png"></div>
 			<div class="popup-text popup-text-1">Well done! Now you know a lot of colors!</div>
-			<div class="close" onclick="gotoLevel2()"></div>                
-			<div class="ok" onclick="gotoLevel2()"></div>
+			<div class="close" onclick="gotoHome()"></div>                
+			<div class="ok" onclick="gotoHome()"></div>
 		</div>
 	</div>
 
@@ -281,88 +288,6 @@
 		<div class="clear"></div>
 	</div>
 
-
-</div>
-
-<div class="screen level2-screen">
-
-	<div class="popup intro">
-		<div class="popup-overlay"></div>
-		<div class="popup-content">
-			<div class="popup-background"><img src="images/level2/popup1.png"></div>
-			<div class="popup-text popup-text-1">Hei, hai să facem<br>aerul mai curat.<br><br>Găsește cele 3 surse<br>de poluare.</div>
-			<div class="close" onclick="startLevel2()"></div>
-			<div class="ok" onclick="starLevel2()"></div>
-		</div>
-	</div>
-
-	<div class="popup masina">
-		<div class="popup-overlay"></div>
-		<div class="popup-content">
-			<div class="popup-background"><img src="images/level2/popup2.png"></div>
-			<div class="popup-text popup-text-1">9 din 10 copii din<br>lumea întreagă<br>respiră un aer poluat.<br>Redu noxele!<br><span>Sursa: breathlife2030.org</span></div>
-			<div class="close" onclick="popupCloseMasina()"></div>
-			<div class="ok" onclick="popupCloseMasina()"></div>
-		</div>
-	</div>
-
-	<div class="popup copaci">
-		<div class="popup-overlay"></div>
-		<div class="popup-content">
-			<div class="popup-background"><img src="images/level2/popup1.png"></div>
-			<div class="popup-text popup-text-1">Plantează<br>2 copaci.</div>
-			<div class="close" onclick="startCopaci()"></div>
-			<div class="ok" onclick="startCopaci()"></div>
-		</div>
-	</div>
-
-	<div class="popup final">
-		<div class="popup-overlay"></div>
-		<div class="popup-content">
-			<div class="popup-background"><img src="images/level2/popup3.png"></div>              
-			<div class="home" onclick="final_home()"></div>
-			<div class="login" onclick="final_login()"></div>
-		</div>
-	</div>
-	
-	<div class="popup final2">
-		<div class="popup-overlay"></div>
-		<div class="popup-content">
-			<div class="popup-background"><img src="images/level2/popup4.png"></div>              
-			<div class="home2" onclick="final_home()"></div>
-		</div>
-	</div>
-
-	<div class="reload" onclick="reloadLevel(2)"><img src="images/level2/reload.png"></div>
-	<div class="level"><img src="images/level2/level2.png"></div>
-
-	<div class="poluare"></div>
-
-	<div class="nor" onclick="clickNor()">
-		<img src="images/level2/nor.png">
-		<img src="images/level2/button-mov.png" class="button">
-	</div>
-	<div class="masina-veche" onclick="clickMasinaVeche()">
-		<img src="images/level2/masina-veche.png">
-		<img src="images/level2/button-alb.png" class="button">
-	</div>
-	<div class="monitor" onclick="clickMonitor()">
-		<img src="images/level2/monitor.png">
-		<img src="images/level2/button-alb.png" class="button">
-	</div>
-
-	<div class="copac copac1" onclick="clickCopac1()">
-		<img src="images/level2/copac.png" class="copac-img">
-		<img src="images/level2/button-alb.png" class="button">
-	</div>
-	<div class="copac copac2" onclick="clickCopac2()">
-		<img src="images/level2/copac.png" class="copac-img">
-		<img src="images/level2/button-alb.png" class="button">
-	</div>
-
-	<div class="masina-electrica">
-		<img src="images/level2/masina-electrica.png">
-	</div>
 
 </div>
 
