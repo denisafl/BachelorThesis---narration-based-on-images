@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>FunLearn</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/jquery-ui.js" type="text/javascript"></script>
+<script src="js/jquery.ui.touch-punch.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+</head>
+
+<body class="login">
+
+<div class="modal iframe-popup">	
+	<iframe width="100%" height="100%" src="https://30creative.ro/mobileapps/Ecotic/lectii/lectia7.pdf"></iframe>
+	<div class="close-iframe" onclick="modalCloseIframe()"></div>
+</div>
+
+<div class="modal general-popup">
+	<div class="modal-overlay" onclick="modalClose()"></div>
+	<div class="modal-content">
+		<div class="close" onclick="modalClose()"></div>
+		<div class="modal-title">Info</div>
+		<div class="modal-subtitle">Info subtitle</div>
+		<div class="modal-text">An error has occured.</div>
+	</div>
+</div>
+
+<div class="modal login-error">
+	<div class="modal-overlay" onclick="modalClose()"></div>
+	<div class="modal-content">
+		<div class="close" onclick="modalClose()"></div>
+		<div class="modal-title">Oopss</div>
+		<div class="modal-subtitle">Login error.</div>
+		<div class="modal-text">Check if the login data are correct.</div>
+	</div>
+</div>
+
+<div class="header">
+    <!-- <div class="back" onclick="goBack()"><img src="images/back.png"></div> -->
+    <div class="clear"></div>
+    <h1 class="login-title"><img src="images/title-login.png">Login</h1>
+    <h1 class="about-title"><img src="images/title-about.png">About</h1>
+    <h1 class="control-panel-title"><img src="images/title-control-panel.png">Control Panel</h1>
+</div>
+
+<div class="screen home-screen">
+    <div class="top" onclick="gotoControlPanel()">
+        <img src="images/home-top.png">
+    </div>
+    <div class="button" onclick="gotoGame()">
+        <span class="title"><img src="images/home-button4.png" />Interactive game</span><br>
+        <span class="subtitle">Learn by playing!</span>
+    </div>
+</div>
+
+<div class="screen login-screen">
+    <div class="top">
+        <img src="images/login-top.png">
+    </div>
+	
+    <div class="form">
+        <div class="screen-content">
+            <div class="title">Welcome!</div>
+			<div>Insert in the fields below the username and password.</div>
+			<div class="label-input none">
+				<div class="label">Name/Username</div>
+				<input type="text" id="name" />
+			</div>
+			<div class="label-input">
+				<div class="label">Username/Email Address</div>
+				<input type="text" id="email" />
+			</div>
+			<div class="label-input">
+				<div class="label">Password</div>
+				<input type="password" id="password" />
+			</div>
+			<div class="label-input">
+				<div class="checkbox" id = "remember">
+					<div class="checkbox-container">
+						<div class="checkbox-check"></div>
+					</div>
+					Remember me
+				</div>
+			</div>
+           
+			<div class="loading">
+				<div class="lds-css ng-scope"><div class="lds-rolling"><div></div></div></div>
+			</div>
+            <div class="button login-btn" onclick="login()">Authentication</div>
+			<div class="button register-btn none" onclick="register()">Register</div>
+        </div>
+    </div>
+</div>
+
+<div class="screen new-password-screen">
+    <div class="top">
+        <img src="images/login-top.png">
+    </div>
+    <div class="form">
+        <div class="screen-content">
+            <div class="title">Fill in the new passowrd</div>
+            <div class="label-input">
+                <div class="label">New password</div>
+                <input type="text" id="newPassword" />
+            </div>
+			<div class="loading">
+				<div class="lds-css ng-scope"><div class="lds-rolling"><div></div></div></div>
+			</div>
+            <div class="button" onclick="setPassword()">Continue</div>
+        </div>
+    </div>
+</div>
+
+<div class="screen about-screen">
+    <div class="screen-content">
+		<p></p>
+        <p>The project "Learn By Image" is intended for children of 2 years and older.
+		<p>This project stimulates the child's attention and develops creativity and imagination.</p>  
+		<p>It is proven that we learn faster through images because they stimulate the brain, training it in different situations.</p>
+		</p>
+
+    </div>
+</div>
+
+<div class="screen control-panel-screen">
+    <div class="screen-content">
+		<div class="title"><img src="images/title-login-black.png">Logout</div>
+        <div onclick="logout()" class="logout">Logout</div>
+    </div>
+</div>
+
+<div class="screen level1-screen">
+
+	<div class="popup intro">
+		<div class="popup-overlay"></div>
+		<div class="popup-content">
+			<div class="popup-background"><img src="images/level1/popup.png"></div>
+			<div class="popup-text popup-text-1">Hey! <br> Let's learn togheter! <br>Drag and drop items to the corresponding receipe!</div>
+			<div class="close" onclick="popupClose()"></div>
+			<div class="ok" onclick="popupClose()"></div>
+		</div>
+	</div>
+
+	<div class="popup color-wrong">
+		<div class="popup-overlay"></div>
+		<div class="popup-content">
+			<div class="popup-background"><img src="images/level1/popup.png"></div>
+			<div class="popup-text popup-text-1">This is not correct...<br>please try another receipe.</div>
+			<div class="close" onclick="popupClose()"></div>                
+			<div class="ok" onclick="popupClose()"></div>
+		</div>
+	</div>
+
+	<div class="popup final">
+		<div class="popup-overlay"></div>
+		<div class="popup-content">
+			<div class="popup-background"><img src="images/level1/popup.png"></div>
+			<div class="popup-text popup-text-1">Well done! Now you know a lot of colors!</div>
+			<div class="close" onclick="gotoLevel2()"></div>                
+			<div class="ok" onclick="gotoLevel2()"></div>
+		</div>
+	</div>
+
+	<div class="reload" onclick="reloadLevel(1)"><img src="images/level1/reload.png"></div>
+	<div class="level"><img src="images/level1/level1.png"></div>
+
+	<!-- Adding sound to all the items in level1 -->
+	<audio id="waterdrop-sound">
+		<source src="sounds/waterdrop.mp3" type="audio/mpeg">
+	</audio>
+	  
+	<audio id="lemon-sound">
+		<source src="sounds/lemon.mp3" type="audio/mpeg">
+	</audio>
+	  
+	<audio id="pear-sound">
+		<source src="sounds/pear.mp3" type="audio/mpeg">
+	</audio>
+	  
+	<audio id="corn-sound">
+		<source src="sounds/corn.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="banana-sound">
+		<source src="sounds/banana.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="donut-sound">
+		<source src="sounds/donut.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="iceCream-sound">
+		<source src="sounds/ice-cream.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="apple-sound">
+		<source src="sounds/apple.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="tomato-sound">
+		<source src="sounds/tomato.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="pepper-sound">
+		<source src="sounds/pepper.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="pease-sound">
+		<source src="sounds/pease.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="grapes-sound">
+		<source src="sounds/grapes.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="plum-sound">
+		<source src="sounds/plum.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="broccoli-sound">
+		<source src="sounds/broccoli.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="orange-sound">
+		<source src="sounds/orange.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="carrot-sound">
+		<source src="sounds/carrot.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="onion-sound">
+		<source src="sounds/onion.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="cucumber-sound">
+		<source src="sounds/cucumber.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="eggplant-sound">
+		<source src="sounds/eggplant.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="strawberry-sound">
+		<source src="sounds/strawberry.mp3" type="audio/mpeg">
+	</audio>
+
+	<div class="waterdrop color color-blue" color="waterdrop"><img src="images/level1/waterdrop.png"></div>
+	<div class="lemon color color-yellow" color="lemon"><img src="images/level1/lemon.png"></div>
+	<div class="pear color color-yellow" color="pear"><img src="images/level1/pear.png"></div>
+	<div class="corn color color-yellow" color="corn"><img src="images/level1/corn.png"></div>
+	<div class="banana color color-yellow" color="banana"><img src="images/level1/banana.png"></div>
+	<div class="donut color color-pink" color="donut"><img src="images/level1/donut.png"></div>
+	<div class="ice-cream color color-pink" color="ice-cream"><img src="images/level1/ice-cream.png"></div>
+	<div class="apple color color-red" color="apple"><img src="images/level1/apple.png"></div>
+	<div class="tomato color color-red" color="tomato"><img src="images/level1/tomato.png"></div>
+	<div class="pepper color color-red" color="pepper"><img src="images/level1/pepper.png"></div>
+	<div class="pease color color-green" color="pease"><img src="images/level1/pease.png"></div>
+	<div class="grapes color color-purple" color="grapes"><img src="images/level1/grapes.png"></div>
+	<div class="plum color color-purple" color="plum"><img src="images/level1/plum.png"></div>
+	<div class="broccoli color color-green" color="broccoli"><img src="images/level1/broccoli.png"></div>
+	<div class="orange color color-orange" color="orange"><img src="images/level1/orange.png"></div>
+	<div class="carrot color color-orange" color="carrot"><img src="images/level1/carrot.png"></div>
+	<div class="onion color color-orange" color="onion"><img src="images/level1/onion.png"></div>
+	<div class="cucumber color color-green" color="cucumber"><img src="images/level1/cucumber.png"></div>
+	<div class="eggplant color color-purple" color="eggplant"><img src="images/level1/eggplant.png"></div>
+	<div class="strawberry color color-red" color="strawberry"><img src="images/level1/strawberry.png"></div>
+
+	<div class="containers">
+		<div class="container container-red"><img src="images/level1/container1.png"></div>
+		<div class="container container-orange"><img src="images/level1/container2.png"></div>
+		<div class="container container-green"><img src="images/level1/container3.png"></div>
+		<div class="container container-blue"><img src="images/level1/container4.png"></div>
+		<div class="container container-yellow"><img src="images/level1/container5.png"></div>
+		<div class="container container-pink"><img src="images/level1/container6.png"></div>
+		<div class="container container-purple"><img src="images/level1/container7.png"></div>
+		<div class="clear"></div>
+	</div>
+
+
+</div>
+
+<div class="screen level2-screen">
+
+	<div class="popup intro">
+		<div class="popup-overlay"></div>
+		<div class="popup-content">
+			<div class="popup-background"><img src="images/level2/popup1.png"></div>
+			<div class="popup-text popup-text-1">Hei, hai să facem<br>aerul mai curat.<br><br>Găsește cele 3 surse<br>de poluare.</div>
+			<div class="close" onclick="startLevel2()"></div>
+			<div class="ok" onclick="starLevel2()"></div>
+		</div>
+	</div>
+
+	<div class="popup masina">
+		<div class="popup-overlay"></div>
+		<div class="popup-content">
+			<div class="popup-background"><img src="images/level2/popup2.png"></div>
+			<div class="popup-text popup-text-1">9 din 10 copii din<br>lumea întreagă<br>respiră un aer poluat.<br>Redu noxele!<br><span>Sursa: breathlife2030.org</span></div>
+			<div class="close" onclick="popupCloseMasina()"></div>
+			<div class="ok" onclick="popupCloseMasina()"></div>
+		</div>
+	</div>
+
+	<div class="popup copaci">
+		<div class="popup-overlay"></div>
+		<div class="popup-content">
+			<div class="popup-background"><img src="images/level2/popup1.png"></div>
+			<div class="popup-text popup-text-1">Plantează<br>2 copaci.</div>
+			<div class="close" onclick="startCopaci()"></div>
+			<div class="ok" onclick="startCopaci()"></div>
+		</div>
+	</div>
+
+	<div class="popup final">
+		<div class="popup-overlay"></div>
+		<div class="popup-content">
+			<div class="popup-background"><img src="images/level2/popup3.png"></div>              
+			<div class="home" onclick="final_home()"></div>
+			<div class="login" onclick="final_login()"></div>
+		</div>
+	</div>
+	
+	<div class="popup final2">
+		<div class="popup-overlay"></div>
+		<div class="popup-content">
+			<div class="popup-background"><img src="images/level2/popup4.png"></div>              
+			<div class="home2" onclick="final_home()"></div>
+		</div>
+	</div>
+
+	<div class="reload" onclick="reloadLevel(2)"><img src="images/level2/reload.png"></div>
+	<div class="level"><img src="images/level2/level2.png"></div>
+
+	<div class="poluare"></div>
+
+	<div class="nor" onclick="clickNor()">
+		<img src="images/level2/nor.png">
+		<img src="images/level2/button-mov.png" class="button">
+	</div>
+	<div class="masina-veche" onclick="clickMasinaVeche()">
+		<img src="images/level2/masina-veche.png">
+		<img src="images/level2/button-alb.png" class="button">
+	</div>
+	<div class="monitor" onclick="clickMonitor()">
+		<img src="images/level2/monitor.png">
+		<img src="images/level2/button-alb.png" class="button">
+	</div>
+
+	<div class="copac copac1" onclick="clickCopac1()">
+		<img src="images/level2/copac.png" class="copac-img">
+		<img src="images/level2/button-alb.png" class="button">
+	</div>
+	<div class="copac copac2" onclick="clickCopac2()">
+		<img src="images/level2/copac.png" class="copac-img">
+		<img src="images/level2/button-alb.png" class="button">
+	</div>
+
+	<div class="masina-electrica">
+		<img src="images/level2/masina-electrica.png">
+	</div>
+
+</div>
+
+<div class="footer">
+    <div class="left" onclick="gotoHome()">
+        <img src="images/footer-home.png"><br>
+        Home
+    </div>
+    <div class="center login none" onclick="gotoLogin()">
+        <img src="images/footer-login.png"><br>
+        Log In
+    </div>
+	<div class="center control-panel none" onclick="gotoControlPanel()">
+        <img src="images/footer-control-panel.png"><br>
+        Control
+    </div>
+    <div class="right" onclick="gotoAbout()">
+        <img src="images/footer-about.png"><br>
+        About
+    </div>
+</div>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
