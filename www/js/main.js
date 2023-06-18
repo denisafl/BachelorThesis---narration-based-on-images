@@ -1,4 +1,4 @@
-var SERVER_API = "https://3332-2a02-2f00-b30a-3d00-88fa-bebd-9f1c-9a7c.eu.ngrok.io/api";
+var SERVER_API = "https://30creative.ro/mobileapps/NodeJSAPI";
 
 var user_id;
 
@@ -148,7 +148,7 @@ function login() {
 	};
 	$.ajax({
 		type: "post",
-		url: SERVER_API + "/login",
+		url: SERVER_API + "/login.php",
 		data: JSON.stringify(data),
 		contentType: "application/json",
 		dataType: 'json',
@@ -156,22 +156,22 @@ function login() {
 			var data = response;
 			$('.loading').hide();
 			$('.screen.login-screen .button').show();
-			// if (data.status == 'success') {
-			// 	if($("#remember").hasClass("checked")){
-			// 		localStorage.setItem("token", data.token);
-			// 	}
-			// 	$('#email').val("");
-			// 	$('#password').val("");
-			// 	gotoHome();
-				
-			// } else {
-			// 	$(".register-btn").removeClass("none");
-			// 	$(".login-btn").addClass("none");
-			// 	$("#name").parent().removeClass("none");
-			// }
-			$('#email').val("");
+			if (data.status == 'success') {
+				if($("#remember").hasClass("checked")){
+					localStorage.setItem("token", data.token);
+				}
+				$('#email').val("");
 				$('#password').val("");
-			 	gotoHome();
+				gotoHome();
+				
+			} else {
+				$(".register-btn").removeClass("none");
+				$(".login-btn").addClass("none");
+				$("#name").parent().removeClass("none");
+			}
+			// $('#email').val("");
+			// 	$('#password').val("");
+			//  	gotoHome();
 			
 			/* Ecran schimbare password */
 			/*if( data.security_level == 0){
@@ -198,9 +198,9 @@ function login() {
 			// $('.screen.login-screen .button').show();
 			// /* Modal mesaj eroare login */
 			// $('.modal.login-error').fadeIn();
-			$('#email').val("");
-				$('#password').val("");
-			 	gotoHome();
+			// $('#email').val("");
+			// 	$('#password').val("");
+			//  	gotoHome();
 		}
 	});
 
@@ -215,7 +215,7 @@ function register() {
 	};
 	$.ajax({
 		type: "post",
-		url: SERVER_API + "/register",
+		url: SERVER_API + "/register.php",
 		data: JSON.stringify(data),
 		contentType: "application/json",
 		dataType: 'json',
@@ -235,7 +235,7 @@ function register() {
 			$('.screen.login-screen .button').show();
 			
 			/* Ecran schimbare password */
-			/*if( data.security_level == 0){
+			if( data.security_level == 0){
 				breadCrumbs.push('new-password');
 
 				$('body').removeClass();
@@ -248,7 +248,7 @@ function register() {
 				$('.footer .login').hide();
 				$('#cod_scoala').val(""),
 				$('#password').val("")
-			}*/
+			}
 		},
 		error: function(xhr, status, error){
 			console && console.log(xhr.statusText);

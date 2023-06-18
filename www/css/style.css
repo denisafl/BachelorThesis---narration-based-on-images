@@ -158,7 +158,7 @@ p {
 .modal .button-popup {
 	width: 100%;
     height: 38px;
-    background: #048041;
+    background: #B45FD3;
     text-align: center;
     color: #ffffff;
     font-size: 12px;
@@ -374,7 +374,7 @@ p {
     position: absolute;
     top: 2px;
     left: 2px;
-    background: #048041;
+    background: #792e94;
     border-radius: 4px;
     display: none;
 }
@@ -674,8 +674,8 @@ p {
 }
 
 .control-panel .screen-content .button {
-    border: 2px solid #048041;
-    color: #048041;
+    border: 2px solid #B45FD3;
+    color: #B45FD3;
     border-radius: 30px;
     height: 58px;
     width: 100%;
@@ -1222,7 +1222,6 @@ body.level2 {
   .option {
     display: flex;
     align-items: center;
-    width: 48%;
     padding: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
@@ -1297,7 +1296,7 @@ body.level2 {
 	position: absolute;
 	width: 60px;
 	height: 60px;
-	border: 5px solid #048041;
+	border: 5px solid #B45FD3;
 	border-top-color: transparent;
 	border-radius: 50%;
 	margin-top: 30px;
