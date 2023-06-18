@@ -3,17 +3,34 @@
 <head>
 <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>FunLearn</title>
+   <style>
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .image-container img {
+      max-width: 200px;
+      height: auto;
+    }
+
+    .image-container:hover img {
+      transform: scale(1.2);
+    }
+  </style>
 </head>
 <body>
     <h1 style="text-align: center; margin: 40px 0 40px 0;">Story Generator</h1>
     <div id="story-container" style="margin-left: 70px;">Step 1: Choose a beginning...</div>
     <div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
     <div id="options-container" style="text-align: center;"></div>
+    <div id="image-container" class="image-container"></div>
     <button id="next-button" onclick="nextStep()">Next</button>
     <div id="summary-container" style="text-align: center;"></div>
     </div>
-  
-
   <script>
     // Define the story steps and options
     const storySteps = [
@@ -23,7 +40,6 @@
           {
             image: "images/level2/image1.jpg",
             text: "Once upon a time",
-            background: "background1.jpg"
           },
           {
             image: "images/level2/image2.jpg",
