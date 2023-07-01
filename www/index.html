@@ -56,7 +56,8 @@
         <span class="subtitle">Learn by playing!</span>
     </div>	
 	<div class="button" onclick="gotoLevel2()">
-		<a href="level2.html" style="text-decoration: none; color: black;">
+		
+		<a style="text-decoration: none; color: black;">
         	<span class="title"><img src="images/home-button4.png" />Game 2</span><br>
 		</a>
 		<span class="subtitle">Discover the story by creating it!</span>
@@ -134,11 +135,19 @@
 </div>
 
 <div class="screen control-panel-screen">
-    <div class="screen-content">
-		<div class="title"><img src="images/title-login-black.png">Logout</div>
-        <div onclick="logout()" class="logout">Logout</div>
-    </div>
-</div>
+	<div class="screen-content">
+	  <div class="title"><img src="images/title-login-black.png">Logout</div>
+	  <div onclick="logout()" class="logout">Logout</div>
+	  <div class="feedback-button">
+		<button class="feedback" onclick="redirectToFeedbackForm()">Give Feedback</button>
+	  </div>
+	</div>
+  </div>  
+  <script>
+	function redirectToFeedbackForm() {
+	  window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSe8jXr_5vsweDYc2n_Oht68gkGhaOIPKJLVEcHTrU_D4kZoYQ/viewform?usp=sf_link"; // Replace with your Google Form URL
+	}
+  </script>
 
 <div class="screen level1-screen">
 
@@ -290,6 +299,8 @@
 
 
 </div>
+
+
 
 <div class="footer">
     <div class="left" onclick="gotoHome()">

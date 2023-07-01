@@ -3,30 +3,20 @@
 <head>
 <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>FunLearn</title>
-   <style>
-    .image-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
-      transition: transform 0.5s ease-in-out;
-    }
-
-    .image-container img {
-      max-width: 200px;
-      height: auto;
-    }
-
-    .image-container:hover img {
-      transform: scale(1.2);
-    }
+  <style>
+    body {
+    background-image: url('images/level2/summary.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
   </style>
 </head>
 <body>
-    <h1 style="text-align: center; margin: 40px 0 40px 0;">Story Generator</h1>
-    <div id="story-container" style="margin-left: 70px;">Step 1: Choose a beginning...</div>
+    <h1 style="text-align: center; margin: 40px 0 40px 0; font-family: Dancing Script;">Story Generator</h1>
+    <div id="story-container" style="margin-left: 70px; font-family: Dancing Script;">Step 1: Choose a beginning...</div>
     <div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
-    <div id="options-container" style="text-align: center;"></div>
+    <div class="options-container" id="options-container" style="text-align: center;"></div>
     <div id="image-container" class="image-container"></div>
     <button id="next-button" onclick="nextStep()">Next</button>
     <div id="summary-container" style="text-align: center;"></div>
@@ -39,19 +29,27 @@
         options: [
           {
             image: "images/level2/image1.jpg",
-            text: "Once upon a time",
+            text: "Once upon a time, ",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
           {
             image: "images/level2/image2.jpg",
-            text: "In a faraway land",
+            text: "In a faraway land, ",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
           {
             image: "images/level2/image3.jpg",
-            text: "Long, long ago",
+            text: "Long, long ago, ",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
           {
             image: "images/level2/image4.jpg",
-            text: "In a magical kingdom",
+            text: "In a magical kingdom, ",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
         ],
       },
@@ -60,19 +58,27 @@
         options: [
           {
             image: "images/level2/image5.jpg",
-            text: "in an enchanted forest",
+            text: "in an enchanted forest, ",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
           {
             image: "images/level2/image6.jpg",
-            text: "on a beautiful beach",
+            text: "on a beautiful beach, ",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
           {
             image: "images/level2/image7.jpg",
-            text: "in a bustling city",
+            text: "in a bustling city, ",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
           {
             image: "images/level2/image8.jpg",
-            text: "at the top of a mountain",
+            text: "at the top of a mountain, ",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
         ],
       },
@@ -82,18 +88,26 @@
           {
             image: "images/level2/image9.png",
             text: "there was a brave prince",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
           {
             image: "images/level2/image10.png",
             text: "there was a little princess",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
           {
             image: "images/level2/image11.png",
             text: "there was a tricksy fairy",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
           {
             image: "images/level2/image12.png",
             text: "there was a powerful witch",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
         ],
       },
@@ -103,18 +117,26 @@
           {
             image: "images/level2/image13.png",
             text: "having magical key that unlocks hidden doors.",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
           {
             image: "images/level2/image14.png",
             text: "having mystical crystal with the power to grant wishes.",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
           {
             image: "images/level2/image15.png",
             text: "who possessed a mysterious book containing ancient spells and wisdom.",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
           {
             image: "images/level2/image16.png",
             text: "with a talking animal companion with extraordinary abilities.",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
         ],
       },
@@ -123,19 +145,27 @@
         options: [
           {
             image: "images/level2/image17.png",
-            text: "Embarked on an epic quest to save a captured friend from an ancient curse,",
+            text: "Embarked on an epic quest to save a captured friend from an ancient curse. ",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
           {
             image: "images/level2/image18.jpg",
-            text: "Discovered a secret portal to a parallel universe and encountered fascinating creatures,",
+            text: "Discovered a secret portal to a parallel universe and encountered fascinating creatures. ",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
           {
             image: "images/level2/image19.png",
-            text: "Uncovered a hidden treasure map that led to a long-lost artifact with incredible powers",
+            text: "Uncovered a hidden treasure map that led to a long-lost artifact with incredible powers. ",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
           {
             image: "images/level2/image20.jpg",
-            text: "Solved a series of challenging puzzles to reveal the location of a legendary magical potion,",
+            text: "Solved a series of challenging puzzles to reveal the location of a legendary magical potion. ",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
         ],
       },  
@@ -144,19 +174,27 @@
         options: [
           {
             image: "images/level2/image21.png",
-            text: "Unleashed the power of friendship and teamwork to overcome seemingly insurmountable obstacles, ",
+            text: "By doing this, unleashed the power of friendship and teamwork to overcome seemingly insurmountable obstacles. ",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
           {
             image: "images/level2/image22.jpg",
-            text: "Used their unique magical abilities to restore balance and harmony to a troubled realm,",
+            text: "Used their unique magical abilities to restore balance and harmony to a troubled realm.",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
           {
             image: "images/level2/image23.png",
-            text: "Formed an unlikely alliance with a group of talking animals to overcome a common enemy,",
+            text: "Formed an unlikely alliance with a group of talking animals to overcome a common enemy.",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
           {
             image: "images/level2/image24.png",
-            text: "Battled fierce mythical creatures and emerged victorious, proving their bravery,",
+            text: "Battled fierce mythical creatures and emerged victorious, proving their bravery.",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
         ],
       }, 
@@ -166,18 +204,26 @@
           {
             image: "images/level2/image25.png",
             text: "And they lived happily ever after.",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
           {
             image: "images/level2/image26.png",
             text: "The end.",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
           {
             image: "images/level2/image27.png",
             text: "To be continued...",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
           {
             image: "images/level2/image28.png",
             text: "And so the adventure continues.",
+            fontSize: "15px", // Add a fontSize property
+            fontFamily: 'Dancing Script', 
           },
         ],
       },
@@ -194,6 +240,7 @@
       const nextButton = document.getElementById("next-button");
 
       storyContainer.textContent = `Step ${currentStep + 1}: ${storySteps[currentStep].stepText}`;
+      storyContainer.classList.add("step-text"); // Add the "step-text" class
 
       optionsContainer.innerHTML = "";
 
@@ -208,6 +255,11 @@
         imageElement.className = "option-image";
         textElement.className = "option-text";
         textElement.textContent = option.text;
+        textElement.style.fontSize = option.fontSize; // Set the font size
+        textElement.style.fontFamily = option.fontFamily; // Set the font size
+
+        // Add a click event listener to toggle the expanded state
+        // optionElement.addEventListener("click", () => toggleOptionExpansion(optionElement));
 
         optionElement.addEventListener("click", () => selectOption(i));
 
@@ -219,6 +271,11 @@
 
       nextButton.disabled = true;
     }
+
+    // // Function to toggle the expanded state of an option
+    //   function toggleOptionExpansion(optionElement) {
+    //     optionElement.classList.toggle("expanded");
+    //   }
 
     // Function to handle option selection
     function selectOption(optionIndex) {

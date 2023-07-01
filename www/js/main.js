@@ -73,6 +73,17 @@ function selPic(type) {
 
 $(document).ready(function(){
 
+	/* Checkbox */
+    $(document).on('click', '.screen-content .label-input .checkbox', function(){
+		var expand = $(this).attr('expand');
+        if($(this).hasClass('checked')) {
+            $(this).removeClass('checked');
+        } else {
+            $(this).addClass('checked');
+        }
+		
+    });
+
 	// Set up login form height 
 
 	$('.screen.login-screen .form').css('max-height', ($(window).height() - $('.screen.login-screen .top').height() + 35) + 'px');
@@ -133,6 +144,9 @@ $(document).ready(function(){
 
 function logout() {
 	localStorage.removeItem("token");
+
+	$('.loading').hide();
+	$('.screen-content .label-input .checkbox').removeClass('checked');
 	
 	gotoLogin();
 	$('.footer .control-panel').hide();
@@ -232,23 +246,23 @@ function register() {
 				
 			}
 			$('.loading').hide();
-			$('.screen.login-screen .button').show();
+			$('.screen.login-screen .button.register-btn').show();
 			
 			/* Ecran schimbare password */
-			if( data.security_level == 0){
-				breadCrumbs.push('new-password');
+			// if( data.security_level == 0){
+			// 	breadCrumbs.push('new-password');
 
-				$('body').removeClass();
-				$('body').addClass('new-password');
+			// 	$('body').removeClass();
+			// 	$('body').addClass('new-password');
 
-				$('.screen.new-password-screen .form').css('max-height', ($(window).height() - $('.screen.new-password-screen .top').height() + 35) + 'px');
-			}else{
-				gotoHome();
-				$('.footer .control-panel').show();
-				$('.footer .login').hide();
-				$('#cod_scoala').val(""),
-				$('#password').val("")
-			}
+			// 	$('.screen.new-password-screen .form').css('max-height', ($(window).height() - $('.screen.new-password-screen .top').height() + 35) + 'px');
+			// }else{
+			// 	gotoHome();
+			// 	$('.footer .control-panel').show();
+			// 	$('.footer .login').hide();
+			// 	$('#cod_scoala').val(""),
+			// 	$('#password').val("")
+			// }
 		},
 		error: function(xhr, status, error){
 			console && console.log(xhr.statusText);
@@ -256,7 +270,7 @@ function register() {
 			console && console.log(error);
 			
 			$('.loading').hide();
-			$('.screen.login-screen .button').show();
+			$('.screen.login-screen .button.register-btn').show();
 			/* Modal mesaj eroare login */
 			$('.modal.login-error').fadeIn();
 		}
@@ -306,6 +320,9 @@ function gotoLogin() {
 
     $('body').removeClass();
     $('body').addClass('login');
+
+	$('.screen.login-screen .button.register-btn').hide();
+	$('.screen.login-screen .button.login-btn').show();
 
     $('.screen.login-screen .form').css('max-height', ($(window).height() - $('.screen.login-screen .top').height() + 35) + 'px');
 }
@@ -864,11 +881,11 @@ $(function() {
 
 
 // /* Level 2 */
-// function gotoLevel2() {
-//     $('body').removeClass('level1');
-//     $('body').addClass('level2');
-//     $('.level2-screen .popup.intro').fadeIn();
-// }
+function gotoLevel2() {
+	screen.orientation.lock('landscape');
+	window.location.href = 'level2.html';
+	
+}
 
 // function startLevel2() {
 //     $('.popup').fadeOut();
