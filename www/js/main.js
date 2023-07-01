@@ -126,20 +126,6 @@ $(document).ready(function(){
 			$('.activity-screen .extra').hide();
 		}
 	});
-
-    /* Checkbox */
-    // $(document).on('click', '.screen-content .label-input .checkbox', function(){
-	// 	var expand = $(this).attr('expand');
-    //     if($(this).hasClass('checked')) {
-    //         $(this).removeClass('checked');
-	// 		$('.ridicare-deee-screen .screen-content .'+expand).hide();
-    //     } else {
-    //         $(this).addClass('checked');
-	// 		$('.ridicare-deee-screen .screen-content .'+expand).show();
-    //     }
-		
-    // });
-
 });
 
 function logout() {
@@ -183,38 +169,11 @@ function login() {
 				$(".login-btn").addClass("none");
 				$("#name").parent().removeClass("none");
 			}
-			// $('#email').val("");
-			// 	$('#password').val("");
-			//  	gotoHome();
-			
-			/* Ecran schimbare password */
-			/*if( data.security_level == 0){
-				breadCrumbs.push('new-password');
-
-				$('body').removeClass();
-				$('body').addClass('new-password');
-
-				$('.screen.new-password-screen .form').css('max-height', ($(window).height() - $('.screen.new-password-screen .top').height() + 35) + 'px');
-			}else{
-				gotoHome();
-				$('.footer .control-panel').show();
-				$('.footer .login').hide();
-				$('#cod_scoala').val(""),
-				$('#password').val("")
-			}*/
 		},
 		error: function(xhr, status, error){
 			console && console.log(xhr.statusText);
 			console && console.log(status);
 			console && console.log(error);
-			
-			// $('.loading').hide();
-			// $('.screen.login-screen .button').show();
-			// /* Modal mesaj eroare login */
-			// $('.modal.login-error').fadeIn();
-			// $('#email').val("");
-			// 	$('#password').val("");
-			//  	gotoHome();
 		}
 	});
 
@@ -247,22 +206,6 @@ function register() {
 			}
 			$('.loading').hide();
 			$('.screen.login-screen .button.register-btn').show();
-			
-			/* Ecran schimbare password */
-			// if( data.security_level == 0){
-			// 	breadCrumbs.push('new-password');
-
-			// 	$('body').removeClass();
-			// 	$('body').addClass('new-password');
-
-			// 	$('.screen.new-password-screen .form').css('max-height', ($(window).height() - $('.screen.new-password-screen .top').height() + 35) + 'px');
-			// }else{
-			// 	gotoHome();
-			// 	$('.footer .control-panel').show();
-			// 	$('.footer .login').hide();
-			// 	$('#cod_scoala').val(""),
-			// 	$('#password').val("")
-			// }
 		},
 		error: function(xhr, status, error){
 			console && console.log(xhr.statusText);
@@ -271,7 +214,7 @@ function register() {
 			
 			$('.loading').hide();
 			$('.screen.login-screen .button.register-btn').show();
-			/* Modal mesaj eroare login */
+			/* Modal message login error */
 			$('.modal.login-error').fadeIn();
 		}
 	});
@@ -413,17 +356,17 @@ function reloadLevel(level) {
     if(level == 1) {
         location.reload();
     }
-    if(level == 2) {
-        $('.poluare').removeClass('fara-nor');
-        $('.poluare').show();
-        $('.nor').show();
-        $('.monitor').show();
-        $('.masina-veche').show();
-        $('.masina-electrica').hide();
-        $('.copac').hide();
-        $('.copac img.copac-img').css('opacity', '0');
-        $('.copac .button').show();
-    }
+    // if(level == 2) {
+    //     $('.poluare').removeClass('fara-nor');
+    //     $('.poluare').show();
+    //     $('.nor').show();
+    //     $('.monitor').show();
+    //     $('.masina-veche').show();
+    //     $('.masina-electrica').hide();
+    //     $('.copac').hide();
+    //     $('.copac img.copac-img').css('opacity', '0');
+    //     $('.copac .button').show();
+    // }
 }
 
 
@@ -886,224 +829,6 @@ function gotoLevel2() {
 	window.location.href = 'level2.html';
 	
 }
-
-// function startLevel2() {
-//     $('.popup').fadeOut();
-//     $('.poluare').show();
-//     $('.button').show();
-// }
-
-// // Define the story steps and options
-// const storySteps = [
-// 	{
-// 	  stepText: "Choose a beginning...",
-// 	  options: [
-// 		{
-// 		  image: "images/image1.jpg",
-// 		  text: "Once upon a time",
-// 		  background: "background1.jpg"
-// 		},
-// 		{
-// 		  image: "image2.jpg",
-// 		  text: "In a faraway land",
-// 		},
-// 		{
-// 		  image: "image3.jpg",
-// 		  text: "Long, long ago",
-// 		},
-// 		{
-// 		  image: "image4.jpg",
-// 		  text: "In a magical kingdom",
-// 		},
-// 	  ],
-// 	},
-// 	{
-// 	  stepText: "Choose a place...",
-// 	  options: [
-// 		{
-// 		  image: "image5.jpg",
-// 		  text: "In the enchanted forest",
-// 		},
-// 		{
-// 		  image: "image6.jpg",
-// 		  text: "On a beautiful beach",
-// 		},
-// 		{
-// 		  image: "image7.jpg",
-// 		  text: "In a bustling city",
-// 		},
-// 		{
-// 		  image: "image8.jpg",
-// 		  text: "At the top of a mountain",
-// 		},
-// 	  ],
-// 	},
-// 	{
-// 	  stepText: "Choose a character...",
-// 	  options: [
-// 		{
-// 		  image: "image9.jpg",
-// 		  text: "A brave knight",
-// 		},
-// 		{
-// 		  image: "image10.jpg",
-// 		  text: "A friendly dragon",
-// 		},
-// 		{
-// 		  image: "image11.jpg",
-// 		  text: "A mischievous fairy",
-// 		},
-// 		{
-// 		  image: "image12.jpg",
-// 		  text: "A curious astronaut",
-// 		},
-// 	  ],
-// 	},
-// 	{
-// 	  stepText: "Choose an object...",
-// 	  options: [
-// 		{
-// 		  image: "image13.jpg",
-// 		  text: "A magic wand",
-// 		},
-// 		{
-// 		  image: "image14.jpg",
-// 		  text: "A treasure chest",
-// 		},
-// 		{
-// 		  image: "image15.jpg",
-// 		  text: "A spaceship",
-// 		},
-// 		{
-// 		  image: "image16.jpg",
-// 		  text: "A secret map",
-// 		},
-// 	  ],
-// 	},
-// 	{
-// 	  stepText: "Choose an ending...",
-// 	  options: [
-// 		{
-// 		  image: "image17.jpg",
-// 		  text: "And they lived happily ever after.",
-// 		},
-// 		{
-// 		  image: "image18.jpg",
-// 		  text: "The end.",
-// 		},
-// 		{
-// 		  image: "image19.jpg",
-// 		  text: "To be continued...",
-// 		},
-// 		{
-// 		  image: "image20.jpg",
-// 		  text: "And so the adventure continues.",
-// 		},
-// 	  ],
-// 	},
-//   ];
-  
-//   // Initialize variables
-//   let currentStep = 0;
-//   const selectedOptions = new Array(storySteps.length);
-  
-//   // Function to render the current step
-//   function renderStep() {
-// 	const storyContainer = document.getElementById("story-container");
-// 	const optionsContainer = document.getElementById("options-container");
-// 	const nextButton = document.getElementById("next-button");
-  
-// 	storyContainer.textContent = `Step ${currentStep + 1}: ${storySteps[currentStep].stepText}`;
-  
-// 	optionsContainer.innerHTML = "";
-  
-// 	for (let i = 0; i < storySteps[currentStep].options.length; i++) {
-// 	  const option = storySteps[currentStep].options[i];
-// 	  const optionElement = document.createElement("div");
-// 	  const imageElement = document.createElement("img");
-// 	  const textElement = document.createElement("div");
-  
-// 	  optionElement.className = "option";
-// 	  imageElement.src = option.image;
-// 	  imageElement.className = "option-image";
-// 	  textElement.className = "option-text";
-// 	  textElement.textContent = option.text;
-  
-// 	  optionElement.addEventListener("click", () => selectOption(i));
-  
-// 	  optionElement.appendChild(imageElement);
-// 	  optionElement.appendChild(textElement);
-  
-// 	  optionsContainer.appendChild(optionElement);
-// 	}
-  
-// 	nextButton.disabled = true;
-//   }
-  
-//   // Function to handle option selection
-//   function selectOption(optionIndex) {
-// 	const selectedOption = selectedOptions[currentStep];
-  
-// 	// Toggle the selection state
-// 	if (selectedOption === optionIndex) {
-// 	  selectedOptions[currentStep] = undefined;
-// 	} else {
-// 	  selectedOptions[currentStep] = optionIndex;
-// 	}
-  
-// 	// Update the UI to reflect the selection
-// 	const options = document.querySelectorAll(".option");
-// 	options.forEach((option, index) => {
-// 	  if (index === optionIndex) {
-// 		option.classList.toggle("selected");
-// 	  } else {
-// 		option.classList.remove("selected");
-// 	  }
-// 	});
-  
-// 	// Enable the Next button if an option is selected
-// 	const nextButton = document.getElementById("next-button");
-// 	nextButton.disabled = selectedOptions[currentStep] === undefined;
-//   }
-  
-//   // Function to generate the story summary
-//   function generateSummary() {
-// 	let summary = "";
-// 	for (let i = 0; i < selectedOptions.length; i++) {
-// 	  const optionIndex = selectedOptions[i];
-// 	  if (optionIndex !== undefined) {
-// 		const option = storySteps[i].options[optionIndex];
-// 		summary += option.text + " ";
-// 	  }
-// 	}
-// 	return summary.trim();
-//   }
-  
-//   // Function to proceed to the next step or display the summary
-//   function nextStep() {
-// 	currentStep++;
-// 	if (currentStep < storySteps.length) {
-// 	  renderStep();
-// 	} else {
-// 	  const summaryContainer = document.getElementById("summary-container");
-// 	  const nextButton = document.getElementById("next-button");
-  
-// 	  // Hide the options container and disable the Next button
-// 	  document.getElementById("options-container").style.display = "none";
-// 	  nextButton.disabled = true;
-  
-// 	  // Update the summary
-// 	  summaryContainer.textContent = "Summary: " + generateSummary();
-  
-// 	  // Scroll to the summary container
-// 	  summaryContainer.scrollIntoView({ behavior: "smooth" });
-// 	}
-//   }
-  
-//   // Render the initial step
-//   renderStep();
-  
-  
 
 // /* END level 2 */
 
