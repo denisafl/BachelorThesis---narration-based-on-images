@@ -260,13 +260,6 @@ p {
     margin-top: 1px;
 }
 
-.activity-screen .header h1.activity-title {
-    display: block;
-}
-.activity-screen .header h1.activity-title img {
-    margin-top: 1px;
-}
-
 
 .home .top, .login .top, .new-password .top {
     width: 100%;
@@ -321,289 +314,15 @@ p {
     font-size: 16px;
     margin-bottom: 5px;
 }
-.login .form .screen-content .label-input, .new-password .form .screen-content .label-input, .ridicare-deee .screen-content .label-input, .activity-screen .screen-content .label-input {
-    margin-top: 15px;
-}
 .login .form .screen-content .label-input .label, .new-password .form .screen-content .label-input .label{
     color: #D3D3D3;
     text-transform: uppercase;
     padding-bottom: 5px;
 }
 
-.activity-screen .screen-content .label-input .label {
-    color: #000000;
-    text-transform: uppercase;
-    padding-bottom: 5px;
-}
-.login .form .screen-content .label-input input, .new-password .form .screen-content .label-input input, .ridicare-deee .screen-content .label-input input, .activity-screen .screen-content .label-input input {
-    width: 100%;
-    border-bottom: 1px solid #EBEBEB;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    padding: 0;
-    margin: 0;
-    padding-bottom: 5px;
-}
-
-.activity-screen .screen-content .label-input textarea {
-	width: 100%;
-    border-bottom: 1px solid #EBEBEB;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    padding: 0;
-    margin: 0;
-    padding-bottom: 5px;
-}
-
-
-.login .form .screen-content .label-input .checkbox .checkbox-container, .ridicare-deee .screen-content .label-input .checkbox .checkbox-container, .activity-screen .screen-content .label-input .checkbox .checkbox-container {
-    float: left;
-    width: 16px;
-    height: 16px;
-    border: 2px solid #792e94;
-    border-radius: 8px;
-    margin-right: 8px;
-    margin-top: 1px;
-    position: relative;
-}
-.login .form .screen-content .label-input .checkbox .checkbox-container .checkbox-check, .ridicare-deee .screen-content .label-input .checkbox .checkbox-container .checkbox-check, .activity-screen .screen-content .label-input .checkbox .checkbox-container .checkbox-check {
-    width: 8px;
-    height: 8px;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    background: #792e94;
-    border-radius: 4px;
-    display: none;
-}
 .screen-content .label-input .checkbox.checked .checkbox-container .checkbox-check {
     display: block !important;
 }
-.login .form .screen-content .button, .new-password .form .screen-content .button, .ridicare-deee .screen-content .button, .activity-screen .screen-content .button
- {
-    width: 100%;
-    height: 58px;
-    background: #B45FD3;
-    text-align: center;
-    color: #ffffff;
-    font-size: 14px;
-    font-family: 'Montserrat-Medium';
-    line-height: 58px;
-    border-radius: 29px;
-    box-shadow: 0px 3px 6px rgba(4, 128, 65, 0.27);
-    text-transform: uppercase;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.premii-mecanism .screen-content .title {
-    font-family: 'Montserrat-Bold';
-    font-size: 16px;
-    padding: 30px 0 15px;
-    position: relative;
-}
-.premii-mecanism .screen-content .title.calculare-punctaj {
-    margin-bottom: 5px;
-}
-.premii-mecanism .screen-content .subtitle {
-    color: #A1A1A1;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-}
-.premii-mecanism .screen-content .premiu {
-    width: 100%;
-    background: #ffffff;
-    border-radius: 30px;
-    padding: 20px;
-    margin-bottom: 18px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);
-}
-.premii-mecanism .screen-content .premiu .premiu-image {
-    float: left;
-    margin-right: 10px;
-}
-.premii-mecanism .screen-content .premiu .premiu-image img {
-    display: block;
-}
-.premii-mecanism .screen-content .premiu .premiu-details .suma {
-    font-family: 'Montserrat-Bold';
-    font-size: 17px;
-}
-.premii-mecanism .screen-content .premiu .premiu-details .suma span {
-    font-family: 'Montserrat-Regular';
-}
-.premii-mecanism .screen-content .premiu .premiu-details .locul {
-    font-size: 9px;
-    color: #8E8E8E;
-    text-transform: uppercase;
-    margin-top: 2px;
-}
-.premii-mecanism .screen-content .activitati {
-    width: 100%;
-    margin-top: 15px;
-}
-.premii-mecanism .screen-content .activitati .activitati1 {
-    float: left;
-    width: 49%;
-}
-.premii-mecanism .screen-content .activitati .activitati2 {
-    float: right;
-    width: 49%;
-}
-.premii-mecanism .screen-content .activitati img {
-    max-width: 100%;
-    display: block;
-}
-.activitati2 .screen-content .acordare-punctaj {
-    width: 100%;
-}
-.activitati2 .screen-content .acordare-punctaj ul li {
-    padding-left: 20px;
-    background: url('../images/bullet.png') no-repeat left 2px;
-    margin-bottom: 10px;
-}
-.premii-mecanism .screen-content .punctaj {
-    width: 100%;
-    background: #ffffff;
-    border-radius: 30px;
-    padding: 15px;
-    margin-bottom: 16px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);
-}
-.premii-mecanism .screen-content .punctaj .punctaj-image {
-    float: left;
-    margin-right: 10px;
-}
-.premii-mecanism .screen-content .punctaj .punctaj-image img {
-    display: block;
-}
-.premii-mecanism .screen-content .punctaj .punctaj-details .puncte {
-    font-family: 'Montserrat-Bold';
-    font-size: 17px;
-}
-.premii-mecanism .screen-content .activity {
-    width: 100%;
-    background: #ffffff;
-    border-radius: 30px;
-    padding: 13px 22px;
-    margin-bottom: 16px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);
-}
-.premii-mecanism .screen-content .activity .activity-image {
-    float: left;
-    margin-right: 15px;
-    width: 34px;
-    text-align: center;
-}
-.premii-mecanism .screen-content .activity .activity-image img {
-    display: inline-block;
-}
-.premii-mecanism .screen-content .activity .activity-details {
-    width: calc(100% - 49px);
-    float: left;
-}
-.premii-mecanism .screen-content .activity .activity-details .task {
-    font-family: 'Montserrat-Bold';
-    font-size: 17px;
-}
-
-
-.activitati1 .screen-content .title, .activitati2 .screen-content .title {
-    font-family: 'Montserrat-Bold';
-    font-size: 16px;
-    padding: 30px 0 15px;
-    position: relative;
-}
-.activitati2 .screen-content .subtitle {
-    text-transform: uppercase;
-    color: #A1A1A1;
-    margin-bottom: 5px;
-}
-.activitati1 .screen-content .activity {
-    width: 100%;
-    background: #ffffff;
-    border-radius: 30px;
-    padding: 13px 22px;
-    margin-bottom: 16px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);
-}
-.activitati1 .screen-content .activity .activity-image {
-    float: left;
-    margin-right: 15px;
-    width: 34px;
-    text-align: center;
-}
-.activitati1 .screen-content .activity .activity-image img {
-    display: inline-block;
-}
-.activitati1 .screen-content .activity .activity-details {
-    width: calc(100% - 49px);
-    float: left;
-}
-.activitati1 .screen-content .activity .activity-details .task {
-    font-family: 'Montserrat-Bold';
-    font-size: 17px;
-}
-
-.stiati-ca .screen-content .intro {
-    padding-top: 30px;
-    padding-bottom: 25px;
-}
-.stiati-ca .screen-content .intro .sursa {
-    margin-top: 10px;
-}
-.stiati-ca .screen-content .intro .sursa a {
-    color: #777777;
-    text-transform: uppercase;
-}
-.stiati-ca .screen-content .image {
-    padding-right: 10px;
-    vertical-align: top;
-}
-.stiati-ca .screen-content .details {
-    vertical-align: top;
-    border-right: 1px solid #D8D8D8;
-    padding-right: 10px;
-}
-.stiati-ca .screen-content .details .title {
-    font-family: 'Montserrat-Bold';
-    font-size: 17px;
-    margin-bottom: 10px;
-    white-space: nowrap;
-}
-.stiati-ca .screen-content .separator {
-    width: 50px;
-}
-.stiati-ca .screen-content .info {
-    white-space: nowrap;
-    vertical-align: top;
-}
-.stiati-ca .screen-content .images img {
-    display: inline-block;
-}
-.stiati-ca .screen-content .images table {
-    width: 100%;
-}
-.stiati-ca .screen-content .images table tr td {
-    width: 33%;
-}
-.stiati-ca .screen-content .images table tr td.image-left {
-    text-align: left;
-}
-.stiati-ca .screen-content .images table tr td.image-right {
-    text-align: right;
-}
-.stiati-ca .screen-content .images table tr td.egal {
-    text-align: center;
-}
-
-.stiati-ca .screen-content .space {
-    height: 25px;
-}
-
-
 
 /* Panou control / dashboard */
 .control-panel .screen-content .title {
@@ -614,63 +333,6 @@ p {
 }
 .control-panel .screen-content .title img {
     margin-right: 8px;
-}
-.control-panel .screen-content .lectii, .control-panel .screen-content .activitati {
-    width: 100%;
-    overflow-x: auto;
-}
-.control-panel .screen-content .lista-lectii .lectie, .control-panel .screen-content .lista-activitati .activity {
-    float: left;
-	color: #ffffff;
-    margin-right: 35px;
-    border-radius: 25px;
-    height: 138px;
-    width: 116px;
-    border: 7px solid #ffffff;
-    text-align: center;
-    position: relative;
-    box-shadow: 0px 3px 6px rgba(170, 170, 170, 0.3);
-}
-.control-panel .screen-content .lista-lectii .lectie.verde, .control-panel .screen-content .lista-activitati .activity.verde {
-    background: #006227;
-}
-.control-panel .screen-content .lista-lectii .lectie.mov, .control-panel .screen-content .lista-activitati .activity.mov {
-    background: #b5037b;
-}
-.control-panel .screen-content .lista-lectii .lectie.albastru, .control-panel .screen-content .lista-activitati .activity.albastru {
-    background: #14B3C1;
-}
-.control-panel .screen-content .lista-lectii .lectie.galben, .control-panel .screen-content .lista-activitati .activity.galben {
-    background: #EDB724;
-}
-.control-panel .screen-content .lista-lectii .lectie.rosu, .control-panel .screen-content .lista-activitati .activity.rosu {
-    background: #ED5224;
-}
-.control-panel .screen-content .lista-lectii .lectie img, .control-panel .screen-content .lista-activitati .activity img {
-    display: inline-block;
-    margin-top: 24px;
-}
-.control-panel .screen-content .lista-lectii .lectie.last, .control-panel .screen-content .lista-activitati .activity.last {
-    margin-right: 0;
-}
-
-.control-panel .screen-content .lista-lectii .lectie .lectie-nume, .control-panel .screen-content .lista-activitati .activity .activity-nume {
-    position: absolute;
-    text-align: center;
-    bottom: 10px;
-    width: 100%;
-    left: 0;
-    font-family: 'Montserrat-Bold';
-    font-size: 12px;
-}
-.control-panel .screen-content .lista-lectii .lectie.albastru .lectie-nume, .control-panel .screen-content .lista-activitati .activity.albastru .activity-nume {
-    color: #AEF7FE;
-}
-.control-panel .screen-content .lista-lectii .lectie.galben .lectie-nume, .control-panel .screen-content .lista-activitati .activity.galben .activity-nume {
-    color: #F2ECDC;
-}
-.control-panel .screen-content .lista-lectii .lectie.rosu .lectie-nume, .control-panel .screen-content .lista-activitati .activity.rosu .activity-nume {
-    color: #F1CABE;
 }
 
 .control-panel .screen-content .button {
@@ -687,36 +349,6 @@ p {
     line-height: 14px;
     padding: 20px 0;
 }
-
-/* Ridicare DEEE */
-.ridicare-deee .screen-content .title {
-    font-family: 'Montserrat-Bold';
-    font-size: 16px;
-    padding-top: 30px;
-    padding-bottom: 10px;
-}
-.ridicare-deee .screen-content .title img {
-    margin-right: 8px;
-}
-
-.ridicare-deee .cantitati{
-	display: none;
-}
-
-/* Formular activitati */
-.activity-screen .screen-content .title {
-    font-family: 'Montserrat-Bold';
-    font-size: 16px;
-    padding-top: 30px;
-    padding-bottom: 10px;
-}
-.activity-screen .screen-content .title img {
-    margin-right: 8px;
-}
-.activity-screen .extra {
-	display: none;
-}
-
 
 .footer {
     height: 55px;
@@ -801,7 +433,7 @@ body.level1 {
     background-size: cover;
 }
 body.level2 {
-    background: url('../images/level2/background-level2.png') no-repeat bottom center;
+    background: url('../images/level2/summary.png') no-repeat bottom center;
     background-size: cover;
 }
 
@@ -1180,62 +812,16 @@ body.level2 {
     display: block;
 }
 
-
-
-
-
-
-.level2 .reload {
-    width: 7.13%;
-    position: absolute;
-    left: 2.6%;
-    top: 3.8%;
-    z-index: 2;
-}
-.level2 .reload img {
-    width: 100%;
-}
-.level2 .level {
-    width: 12%;
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 5.42%;
-    z-index: 2;
-}
-.level2 .level img {
-    width: 100%;
-}
-
-.level2 .poluare {
-    background-color: rgba(175, 188, 151, 0.64);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    display: none;
-}
-.level2 .poluare.fara-nor {
-    background-color: rgba(175, 188, 151, 0.40);
-}
-
-.level2 .button {
-    position: absolute;
-    width: 6vw !important;
-    display: none;
-}
-  #story-container {
+#story-container {
     font-size: 18px;
     margin-bottom: 10px;
     margin-left: 10px;
   }
-  .options-container {
+.options-container {
     display: flex;
     justify-content: space-between;
   }
-  .option {
+.option {
     display: flex;
     align-items: center;
     padding: 10px;
@@ -1244,23 +830,23 @@ body.level2 {
     border: 1px solid #ccc;
     cursor: pointer;
   }
-  .option-image {
+.option-image {
     width: 100px;
     height: 100px;
     margin-right: 10px;
   }
-  .option-text {
+.option-text {
     flex-grow: 1;
   }
-  .selected {
+.selected {
     border-color: blue;
   }
-  #next-button {
+#next-button {
     font-size: 16px;
     padding: 10px 20px;
     margin-left: 20px;
   }
-  #summary-container {
+#summary-container {
     margin-top: 20px;
   }
 
@@ -1327,9 +913,7 @@ body.level2 {
 	transform: rotate(90deg);
 }
 
-
-
-  .options-container{
+.options-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -1337,35 +921,23 @@ body.level2 {
     gap: 20px;
   }
 
-  .options-column {
+.options-column {
     flex-basis: 20%;
   }
 
-  .option {
+.option {
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
   }
 
-  /* .option-image {
-    width: 250px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 10px;
-  } */
-
-  .option-text {
+.option-text {
     margin-top: 10px;
     text-align: center;
-  }
-  /* .option.expanded {
-    flex-basis: auto;
-    flex-grow: 1;
-    transition: flex-grow 0.3s ease;
-  } */
+}
 
-  #summary-container {
+#summary-container {
     text-align: center;
     color: #333; 
     font-size: 20px; 

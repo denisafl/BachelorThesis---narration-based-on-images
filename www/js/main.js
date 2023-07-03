@@ -2,75 +2,6 @@ var SERVER_API = "https://30creative.ro/mobileapps/NodeJSAPI";
 
 var user_id;
 
-var activity_images = [];
-var activity_extra_images = [];
-var activity_documents = [];
-var activity_rights = [];
-var filesToSync = 0;
-var filesSynced = 0;
-
-function selDoc(type){
-	window.OurCodeWorld.Filebrowser.filePicker.multi({
-		success: function(data){
-			if(!data.length){
-				// No file selected
-				return;
-			}
-
-			//console.log(data);
-			data.forEach(function(file) {
-				var fileName = file.substr(file.lastIndexOf('/')+1);
-				var newHtml = '<div>"'+fileName+'"</div>';
-				if( type == 3){
-					$('.activity-screen #activity_documents_container').append(newHtml);
-					activity_documents.push(file);
-				}
-				if( type == 4){
-					$('.activity-screen #activity_rights_container').append(newHtml);
-					activity_r.push(file);
-				}
-			});
-		},
-		//startupPath:"/emulated/0/Downloads",
-		error: function(err){
-			console.log(err);
-		}
-	});
-}
-
-function selPic(type) {
-	
-	cordova.plugins.diagnostic.requestExternalStorageAuthorization(function(status){
-		console.log("Authorization request for external storage use was " + (status == cordova.plugins.diagnostic.permissionStatus.GRANTED ? "granted" : "denied"));
-		if( status == cordova.plugins.diagnostic.permissionStatus.GRANTED ){
-			window.imagePicker.getPictures(
-				function(results) {
-					
-					for (var i = 0; i < results.length; i++) {
-						var newHtml = '<img style="width: 50%;" src="' + results[i] + '">';
-						if( type == 1 ){
-							$('.activity-screen #activity_images_container').append(newHtml);
-							activity_images.push(results[i]);
-						}
-						if( type == 2 ){
-							$('.activity-screen #activity_extra_images_container').append(newHtml);
-							activity_extra_images.push(results[i]);
-						}				
-					}
-				}, function (error) {
-					console.log('Error: ' + error);
-				}, {
-					quality: 50,
-					maximumImagesCount: 100
-				}
-			);
-		}
-	}, function(error){
-		console.error(error);
-	});
-	
-}
-
 $(document).ready(function(){
 
 	/* Checkbox */
@@ -103,29 +34,6 @@ $(document).ready(function(){
 		$('.footer .control-panel').show();
 		$('.footer .login').hide();
 	}
-	
-	$(document).on('click', '.activity-screen #activity_images', function(){
-		selPic(1);
-	});
-	$(document).on('click', '.activity-screen #activity_extra_images', function(){
-		selPic(2);
-	});
-	$(document).on('click', '.activity-screen #activity_documents', function(){
-		selDoc(3);
-	});
-	$(document).on('click', '.activity-screen #activity_rights', function(){
-		selDoc(4);
-	});
-	
-	/* Select */
-	$(document).on('change', '.activity-screen #yes_no_select', function() {
-		console.log(this.value);
-		if( this.value == 'yes' ){
-			$('.activity-screen .extra').show();
-		}else if( this.value == 'no' ){
-			$('.activity-screen .extra').hide();
-		}
-	});
 });
 
 function logout() {
@@ -356,17 +264,6 @@ function reloadLevel(level) {
     if(level == 1) {
         location.reload();
     }
-    // if(level == 2) {
-    //     $('.poluare').removeClass('fara-nor');
-    //     $('.poluare').show();
-    //     $('.nor').show();
-    //     $('.monitor').show();
-    //     $('.masina-veche').show();
-    //     $('.masina-electrica').hide();
-    //     $('.copac').hide();
-    //     $('.copac img.copac-img').css('opacity', '0');
-    //     $('.copac .button').show();
-    // }
 }
 
 
@@ -833,7 +730,7 @@ function gotoLevel2() {
 // /* END level 2 */
 
 function final() {
-    // AICI ESTE FUNCTIA DE FINAL SA-L INTOARCEM IN APLICATIE
+    // final function to return the user in the home page
 	location.reload();
 }
 
