@@ -354,11 +354,11 @@
           const option = storySteps[i].options[optionIndex];
           summary += option.text + " ";
 
-          // Play the audio of the selected option in the summary
-          if (option.audio) {
-            const audio = new Audio(option.audio);
-            audio.play();
-          }
+          // // Play the audio of the selected option in the summary
+          // if (option.audio) {
+          //   const audio = new Audio(option.audio);
+          //   audio.play();
+          // }
         }
       }
       return summary.trim();
